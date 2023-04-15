@@ -20,10 +20,7 @@ try:
         #Açık portu göster
         result = s.connect_ex((target, port))
         if result == 0:
-            file = open("ports.txt", "w")
             print("[*] Port {} is open".format(port))
-            file.write("[*] Port {} is open".format(port) + " ip: "+str(target)+"\n")
-            file.close()
         s.close()
 except KeyboardInterrupt:
     print("\n Kapatılıyor")
